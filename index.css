@@ -79,35 +79,28 @@ hr {
 
 .thread {
     margin: 1rem 0.5rem;
-    display: flex;
-    justify-content: right;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 4fr 1fr 1fr;
 }
 
 .threads .nameTag {
-    flex: 10 10 auto;
     margin-bottom: 0.2rem;
 }
 
 .threads .tag,
 .threads .time {
     font-size: 1.6vmin;
+    margin-top: 0.5rem;
     color: grey;
 }
 
-
-.threads .authorAndTime {
-    flex: 2 2 auto;
-}
-
 .threads .comments {
-    flex: 1 1 auto;
+    text-align: center;
 }
 
 .metadata {
     font-size: 1.9vmin;
     color: grey;
 }
-
 
 
