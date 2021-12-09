@@ -1,0 +1,15 @@
+/* 두번째 방법 */
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+.container {
+    display: flex;
+    
+}
