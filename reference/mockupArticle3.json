@@ -1,0 +1,11 @@
+{
+  "articleData": {
+    "contentID": 3,
+    "name": "Test1",
+    "contents": "some content",
+    "author": "some author",
+    "tag": "javascript",
+    "comments": ["this is a comment", "this is another comment"],
+    "lastModified": "2017-01-01"
+  }
+}

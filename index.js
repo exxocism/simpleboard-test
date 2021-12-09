@@ -1,5 +1,4 @@
 window.addEventListener('DOMContentLoaded', (event) => {
-    console.log('DOM fully loaded and parsed');
     //fetch data from api
     const endpoint = 'reference/mockup.json';
     fetch(endpoint).then( res => res.json())
@@ -14,7 +13,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
                     const name = document.createElement('div');
                     name.classList.add('name');
-                    name.textContent = thread.name;
+                    name.innerHTML = `<a href="content.html?id=${thread.contentID}">${thread.name}</a>`;
                     nameTag.appendChild(name);
                     
                     const tag = document.createElement('div');
