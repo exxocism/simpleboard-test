@@ -1,0 +1,39 @@
+{
+    "boarddata" : [
+        { 
+            "name": "Test1",
+            "contents": "some content",
+            "author": "some author",
+            "tag": "javascript",
+            "comments": [
+                "this is a comment",
+                "this is another comment"
+            ],
+            "lastModified": "2017-01-01"
+        },
+        { 
+            "name": "Test2",
+            "contents": "some content",
+            "author": "another author",
+            "tag": "tag2",
+            "comments": [
+                "this is a comment",
+                "this is another comment"
+            ],
+            "lastModified": "2018-01-01"
+        },
+        { 
+            "name": "Test3",
+            "contents": "some content",
+            "author": "yet another author",
+            "tag": "tag3",
+            "comments": [
+                "this is a comment",
+                "this is another comment",
+                "this is another comment",
+                "this is another comment"
+            ],
+            "lastModified": "2019-01-01"
+        }        
+    ]
+}
