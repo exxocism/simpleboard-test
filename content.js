@@ -23,6 +23,9 @@ window.addEventListener('DOMContentLoaded', (event) => {
     const endpoint = `reference/mockupArticle${fetchID}.json`;
     fetch(endpoint).then( res => res.json() )
         .then( ({articleData}) => {
+            const forumTag = document.getElementsByClassName('forumTag')[0];
+            forumTag.textContent = articleData.tag;
+            
             const article = document.getElementById('article');
 
             const articleName = document.createElement('div');
