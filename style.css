@@ -1,0 +1,106 @@
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+  list-style: none;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #ed8b78;
+}
+
+.form-container {
+  width: 280px;
+  background-color: whitesmoke;
+  padding: 30px;
+  border-radius: 8px;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+/* form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+} */
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.user-info li {
+  margin-bottom: 20px;
+}
+
+.user-info input {
+  height: 35px;
+  width: 100%;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid lightgray;
+  padding-left: 5px;
+}
+
+.user-info input:focus {
+  border-color: #ed8b78;
+}
+
+.pass-link {
+  margin-top: -15px;
+  margin-bottom: 17px;
+}
+
+.pass-link a,
+.signup-link a {
+  color: gray;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+.pass-link a:hover,
+.signup-link a:hover {
+  color: #ed8b78;
+  text-decoration: underline;
+}
+
+input[type="submit"] {
+  height: 35px;
+  width: 100%;
+  border-radius: 5px;
+  color: white;
+  background-color: #ed8b78;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+input[type="submit"]:hover {
+  opacity: 0.8;
+}
+
+.signup-link {
+  font-size: 14px;
+  text-align: center;
+}
+
+
+
+
+

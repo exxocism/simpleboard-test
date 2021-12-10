@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Page</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="form-container">
+      <div class="title">Login</div>
+      <form action="https://boardapi.eax.kr:4500/users/login" method="post" class="login">
+        <ul class="user-info">
+          <li>
+            <input type="text" name="email" placeholder="Email" required />
+          </li>
+          <li>
+            <input type="password" name="password" placeholder="Password" required />
+          </li>
+        </ul>
+        <div class="pass-link"><a href="#">Forgot password?</a></div>
+        <input type="submit" value="Login" />
+        <div class="signup-link">
+          Not a member?&nbsp;
+          <a href="signup.html">Sign up</a>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
