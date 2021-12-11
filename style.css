@@ -30,13 +30,6 @@ body {
   margin-bottom: 15px;
 }
 
-/* form {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-} */
-
 .user-info {
   display: flex;
   flex-direction: column;
@@ -78,7 +71,24 @@ body {
   text-decoration: underline;
 }
 
-input[type="submit"] {
+.error-message {
+  width: 100%;
+  font-size: 10px;
+}
+
+.error-message.username {
+  display: none;
+}
+
+.error-message.email {
+  display: none;
+}
+
+.error-message.password {
+  display: none;
+}
+
+.submit-btn {
   height: 35px;
   width: 100%;
   border-radius: 5px;
@@ -91,7 +101,7 @@ input[type="submit"] {
   margin-bottom: 10px;
 }
 
-input[type="submit"]:hover {
+.submit-btn:hover {
   opacity: 0.8;
 }
 
@@ -99,8 +109,3 @@ input[type="submit"]:hover {
   font-size: 14px;
   text-align: center;
 }
-
-
-
-
-

@@ -6,23 +6,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sign up Page</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="signup.js" defer></script>
   </head>
   <body>
     <div class="form-container">
       <div class="title">Sign up</div>
-      <form action="#" class="signup">
+      <form
+        action="https://boardapi.eax.kr:4500/users/signup"
+        method="POST"
+        class="signup"
+      >
         <ul class="user-info">
           <li>
-            <input type="text" name="email" placeholder="Email" required />
+            <input
+              type="text"
+              name="user-name"
+              placeholder="User name"
+              required
+            />
+            <span class="error-message username"></span>
           </li>
           <li>
-            <input type="password" name="password" placeholder="Password" required />
+            <input type="email" name="email" placeholder="Email" required />
+            <span class="error-message email"></span>
           </li>
           <li>
-            <input type="password" placeholder="Confirm password" required />
+            <input
+              type="password"
+              name="password"
+              placeholder="Password"
+              required
+            />
+          </li>
+          <li>
+            <input
+              type="password"
+              name="confirm-password"
+              placeholder="Confirm password"
+              required
+            />
+            <span class="error-message password"></span>
           </li>
         </ul>
-        <input type="submit" value="Sign up" />
+        <input type="button" value="Sign up" class="submit-btn" />
       </form>
     </div>
   </body>
