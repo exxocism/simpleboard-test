@@ -10,17 +10,26 @@
   <body>
     <div class="form-container">
       <div class="title">Login</div>
-      <form action="https://boardapi.eax.kr:4500/users/login" method="post" class="login">
+      <form
+        action="https://boardapi.eax.kr:4500/users/login"
+        method="post"
+        class="login"
+      >
         <ul class="user-info">
           <li>
             <input type="text" name="email" placeholder="Email" required />
           </li>
           <li>
-            <input type="password" name="password" placeholder="Password" required />
+            <input
+              type="password"
+              name="password"
+              placeholder="Password"
+              required
+            />
           </li>
         </ul>
         <div class="pass-link"><a href="#">Forgot password?</a></div>
-        <input type="submit" value="Login" />
+        <input type="button" value="Login" class="submit-btn" />
         <div class="signup-link">
           Not a member?&nbsp;
           <a href="signup.html">Sign up</a>
