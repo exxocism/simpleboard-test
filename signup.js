@@ -29,6 +29,7 @@ submitBtn.addEventListener("click", (e) => {
 
 let urlParams = new URLSearchParams(window.location.search);
 const errorId = Number(urlParams.get("error"));
+if( errorId === null ) return ;
 if (errorId === 0) {
   usernameErrMsg.style.display = "block";
   usernameErrMsg.textContent = "The user name is already in use.";
