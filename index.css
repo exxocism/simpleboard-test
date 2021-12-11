@@ -1,4 +1,6 @@
-
+.forumName {
+    flex: 8 8 auto;
+}
 
 .threads {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
