@@ -28,15 +28,18 @@ submitBtn.addEventListener("click", (e) => {
 });
 
 let urlParams = new URLSearchParams(window.location.search);
-const errorId = Number(urlParams.get("error"));
-if( errorId === null ) return ;
-if (errorId === 0) {
-  usernameErrMsg.style.display = "block";
-  usernameErrMsg.textContent = "The user name is already in use.";
-} else if (errorId === 1) {
-  emailErrMsg.style.display = "block";
-  emailErrMsg.textContent = "The email address is already in use.";
-} else if (errorId === 2) {
-  emailErrMsg.style.display = "block";
-  emailErrMsg.textContent = "The email address is not valiable.";
-}
+let errorId = urlParams.get("error");
+  if( errorId !== null ) {
+    errorId = Number(errorId);
+
+      if (errorId === 0) {
+      usernameErrMsg.style.display = "block";
+      usernameErrMsg.textContent = "The user name is already in use.";
+    } else if (errorId === 1) {
+      emailErrMsg.style.display = "block";
+      emailErrMsg.textContent = "The email address is already in use.";
+    } else if (errorId === 2) {
+      emailErrMsg.style.display = "block";
+      emailErrMsg.textContent = "The email address is not valiable.";
+    }
+  }
