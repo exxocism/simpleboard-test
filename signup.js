@@ -6,7 +6,7 @@ const confirmPassInput = document.querySelector(
 const email = document.querySelector('input[name="email"]');
 const form = document.querySelector(".signup");
 const usernameErrMsg = document.querySelector(".error-message.username");
-const emailErrMsg = document.querySelector(".error-message.email");
+const emailErrMsg = document.querySelector(".error-message.mail");
 const passwordErrMsg = document.querySelector(".error-message.password");
 
 confirmPassInput.addEventListener("keyup", (e) => {
@@ -28,14 +28,14 @@ submitBtn.addEventListener("click", (e) => {
 });
 
 let urlParams = new URLSearchParams(window.location.search);
-const errorId = urlParams.get("error");
-if (errorId === "0") {
+const errorId = Number(urlParams.get("error"));
+if (errorId === 0) {
   usernameErrMsg.style.display = "block";
   usernameErrMsg.textContent = "The user name is already in use.";
-} else if (errorId === "1") {
+} else if (errorId === 1) {
   emailErrMsg.style.display = "block";
-  errorMessage.textContent = "The email address is already in use.";
-} else if (errorId === "2") {
+  emailErrMsg.textContent = "The email address is already in use.";
+} else if (errorId === 2) {
   emailErrMsg.style.display = "block";
-  errorMessage.textContent = "The email address is not valiable.";
+  emailErrMsg.textContent = "The email address is not valiable.";
 }

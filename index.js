@@ -1,14 +1,6 @@
 window.addEventListener('DOMContentLoaded', (event) => {
-    // if a user is not authorized, redirect to login page
-    console.dir(document.cookie);
-    if ( !document.cookie?.Path ) {
-        return ;
-        let backURL = window.location.href;
-        const fromnow = backURL.lastindexOf('/');
-        backURL = backURL.slice(0, fromnow + 1) + 'index.html';
-        window.location.href = backURL;
-        return ;
-    }
+    // check if a user is authorized
+    
 
     //fetch data from api
     const endpoint = 'reference/mockup.json';

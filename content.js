@@ -16,7 +16,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
         }, 3000);
         return ;
     }
-    console.log(fetchID);
 
 
     //fetch data from api
