@@ -30,5 +30,4 @@ window.addEventListener("DOMContentLoaded", async (event) => {
         const form = document.querySelector("#article");
         form.submit();
     });
-    console.dir(tokenInfo);
 });

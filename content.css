@@ -81,6 +81,24 @@
     margin: 0.5rem 1rem;
 }
 
+
+
+.editArticleName {
+    display: block;
+    margin-bottom: 0.5em;
+    width: 100%;
+}
+
+.editArticleText {
+    display: block;
+    margin-bottom: 1em;
+    width: 100%;
+    height: 45vmin;
+    resize: vertical;
+}
+
+
+
 @media screen and (min-width: 1024px) {
 
     .forumNameAndTag {

@@ -1,6 +1,4 @@
-window.addEventListener("DOMContentLoaded", (event) => {
-
-  getTokenInfo();
+window.addEventListener("DOMContentLoaded", async (event) => {
 
   //fetch data from api
   fetchURL = `${endpoint}/border/list`;
@@ -54,4 +52,13 @@ window.addEventListener("DOMContentLoaded", (event) => {
         threadStart.appendChild(line);
       }
     });
+
+    let tokeninfo;
+    try {
+      tokeninfo = await getTokenInfo();
+    } catch (error) {
+      //do nothing
+      return ;
+    }
+    document.querySelector(".write").style.visibility = "visible";
 });

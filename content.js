@@ -1,5 +1,4 @@
 window.addEventListener("DOMContentLoaded", async (event) => {
-
   //get parameter from address bar
   let urlParams = new URLSearchParams(window.location.search);
   const fetchID = urlParams.get("id");
@@ -98,13 +97,104 @@ window.addEventListener("DOMContentLoaded", async (event) => {
       }, 3000);
     });
 
-    let tokenInfo;
-    try {
-      tokenInfo = await getTokenInfo();
-    } catch (error) {
-      //hide icons since user is not logged in
+  let tokenInfo;
+  try {
+    tokenInfo = await getTokenInfo();
+  } catch (error) {
+    //hide icons since user is not logged in
+  }
+  //check crednetials and if user is logged in, show icons
+  document.querySelector(".write").style.visibility = "visible";
 
-    }
-    //check crednetials and if user is logged in, show icons
+  setTimeout(() => {
 
+    const writerName = document.querySelector("#name").textContent;
+    if (tokenInfo.name !== writerName) return;
+
+
+    const modifyButton = document.querySelector(".modify");
+    modifyButton.style.visibility = "visible";
+    modifyButton.addEventListener("click", async () => {
+
+      if( !document.querySelector(".editArticleName") )
+      {
+        const articleName = document.querySelector(".articleName");
+        const articleContent = document.querySelector("#content");
+
+        const editArticleName = document.createElement("input");
+        editArticleName.classList.add("editArticleName");
+        editArticleName.type = "text";
+        editArticleName.value = articleName.textContent;
+        articleName.replaceWith(editArticleName);
+
+        const editArticleText = document.createElement("textarea");
+        editArticleText.classList.add("editArticleText");
+        editArticleText.value = articleContent.textContent;
+        articleContent.replaceWith(editArticleText);
+
+        modifyButton.innerHTML = `Save <i class="fa-regular fa-floppy-disk"></i>`;
+        modifyButton.style.color = "blue";
+      } else {
+        if (!window.confirm("Are you sure you want to modify this article?")) return ;
+        
+
+        const articleName = document.querySelector(".editArticleName");
+        const articleContent = document.querySelector(".editArticleText");
+
+        if( articleName.value === "" ) {
+          alert("Please enter a title");
+          return;
+        }
+
+        if( articleContent.value === "" ) {
+          alert("Please enter a content");
+          return;
+        }
+        
+        const fetchURL = `${endpoint}/border/modify/${fetchID}`;
+        const payload = {
+          subject: articleName.value,
+          category: document.querySelector(".forumTag").textContent,
+          content: articleContent.value
+        };
+        const options = { 
+          method: "PUT", 
+          credentials: "include", 
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify(payload) 
+        };
+        let response;
+        try {
+          response = await fetch(fetchURL, options);
+        } catch (error) {
+          alert("Failed to modify article");
+          console.dir(error);
+          return ;
+        }
+        if (response.status === 200) window.location.reload();
+      }
+
+    });
+
+    const deleteContent = document.querySelector(".delete");
+    deleteContent.style.visibility = "visible";
+
+    deleteContent.addEventListener("click", async () => {
+      if (!window.confirm("Are you sure you want to delete this article?")) return ;
+      const fetchURL = `${endpoint}/border/delete/${fetchID}`;
+      const options = { method: "DELETE", credentials: "include" };
+      let result;
+      try {
+        result = await fetch(fetchURL, options);
+      } catch (error) {
+        alert("Failed to delete article");
+        return;
+      }
+      if (result.status === 200) window.location.href = "index.html";
+      else alert("Failed to delete article");
+    });
+
+  }, 0);
 });
