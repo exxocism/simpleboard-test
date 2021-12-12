@@ -1,21 +1,6 @@
 window.addEventListener("DOMContentLoaded", (event) => {
-  const endpoint = "https://boardapi.eax.kr:4500";
 
-  // check if a user is logged in
-  let fetchURL = `${endpoint}/users/userinfo`;
-  fetch(fetchURL, { method: "GET", credentials: 'include' })
-    .then((response) => response.json())
-    .then((response) => {
-      const userName = document.querySelector(".username");
-      const loginOrLogout = document.querySelector(".loginOrLogout");
-
-      userName.innerHTML = `Logged in as <span style="color:blue;font-weight:bold;">${response.name}</span>`;
-      loginOrLogout.innerHTML = `<a href="${endpoint}/users/logout">Logout <i class="fa-solid fa-power-off"></i></a>`;
-    })
-    .catch((error) => {
-      //do nothing
-      console.dir(error);
-    });
+  getTokenInfo();
 
   //fetch data from api
   fetchURL = `${endpoint}/border/list`;
