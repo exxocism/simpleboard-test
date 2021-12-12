@@ -102,9 +102,10 @@ window.addEventListener("DOMContentLoaded", async (event) => {
     tokenInfo = await getTokenInfo();
   } catch (error) {
     //hide icons since user is not logged in
+    return ;
   }
   //check crednetials and if user is logged in, show icons
-  document.querySelector(".write").style.visibility = "visible";
+  if( tokenInfo ) document.querySelector(".write").style.visibility = "visible";
 
   setTimeout(() => {
 
