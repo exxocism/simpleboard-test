@@ -11,7 +11,7 @@ window.addEventListener("DOMContentLoaded", async (event) => {
     article.appendChild(articleName);
 
     setTimeout(() => {
-      window.location.href = "index.html";
+      window.location.href = "./index.html";
     }, 3000);
     return;
   }
@@ -93,7 +93,7 @@ window.addEventListener("DOMContentLoaded", async (event) => {
       article.appendChild(articleName);
 
       setTimeout(() => {
-        window.location.href = "index.html";
+        window.location.href = "./index.html";
       }, 3000);
     });
 
@@ -193,7 +193,7 @@ window.addEventListener("DOMContentLoaded", async (event) => {
         alert("Failed to delete article");
         return;
       }
-      if (result.status === 200) window.location.href = "index.html";
+      if (result.status === 200) window.location.href = "./index.html";
       else alert("Failed to delete article");
     });
 

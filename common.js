@@ -26,3 +26,10 @@ function getTokenInfo() {
 function isLoggedIn() {
   return loggedIn;
 }
+
+window.addEventListener("DOMContentLoaded", () => {
+  const mainImage = document.querySelector(".mainImage");
+  mainImage.addEventListener("click", () => {
+    window.location.href = "./index.html";
+  });
+});

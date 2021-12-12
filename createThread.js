@@ -4,7 +4,7 @@ window.addEventListener("DOMContentLoaded", async (event) => {
     try {
         tokenInfo = await getTokenInfo();
     } catch (error) {
-        window.location.href = "/login";
+        window.location.href = "./login.html";
     }
     
     const writeButton = document.querySelector(".write");
