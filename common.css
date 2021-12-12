@@ -8,6 +8,8 @@ html {
 body {
     margin: 0;
     padding: 0;
+    width: 100%;
+    height: 100%;
 }
   
 *,
@@ -16,14 +18,10 @@ body {
   box-sizing: inherit;
 }
 
-.body {
-    width: 100%;
-    height: 100%;
-}
-
 .container {
     display: grid;
     grid-template-columns: 1fr 8fr;
+    width: 100%;
 }
 
 .mainImage {
@@ -36,15 +34,33 @@ body {
     padding: 1rem;
     overflow: hidden;
     height: 100vh;
+    width: 100%;
     background-color: #ee837b;
 }
 
-.categories {
-    display: flex;
-    flex-direction: column;
-    justify-content: left;
-    align-items: baseline;
-    color: #6a3f38;
+@media screen and (min-width: 1024px) {
+    .categories {
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+        align-items: baseline;
+        color: #6a3f38;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .categories {
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+        align-items: baseline;
+        color: red;
+        width: 100%;
+    }
+
+    .category {
+        width: 10vw;
+    }
 }
 
 .categories > a {
