@@ -64,6 +64,7 @@
     color: hsl(0, 10%, 30%);
     padding-left: 1rem;
     margin-bottom: 2rem;
+    white-space: pre-wrap;
 }
 
 .commentsMetadata {
