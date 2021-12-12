@@ -4,22 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>:: Simple BBS Forum ::</title>
     <link rel="stylesheet" href="common.css">
     <link rel="stylesheet" href="content.css">
 </head>
 <body>
     <div class="container">
         <div class="menu">
-            <div class="mainImage">
-                <i class="fa-regular fa-message"></i>
-            </div>
-            <div class="categories">
-                <a class="mockup category" href="#">News</a>
-                <a class="mockup category" href="#">Catalog</a>
-                <a class="mockup category" href="#">Reference</a>
-                <a class="mockup category" href="#">Directory</a>
-                <a class="mockup category" href="#">Questions</a>
+            <div class="menubar">
+                <div class="mainImage">
+                    <i class="fa-regular fa-message"></i>
+                </div>
+                <div class="categories">
+                    <a class="mockup category" href="#">News</a>
+                    <a class="mockup category" href="#">Catalog</a>
+                    <a class="mockup category" href="#">Reference</a>
+                    <a class="mockup category" href="#">Directory</a>
+                    <a class="mockup category" href="#">Questions</a>
+                </div>
             </div>
         </div>
         <div class="forum">
@@ -31,7 +33,7 @@
                     <span class="forumAnd"><i class="fa-solid fa-angle-down"></i></span>
                 </div>
                 <div class="username">Please Login</div>
-                <div class="loginOrLogout">Login <i class="fa-solid fa-right-to-bracket"></i></div>
+                <div class="loginOrLogout"><a href="login.html">Login <i class="fa-solid fa-right-to-bracket"></i></a></div>
             </div>
             <div id="article">
 
@@ -55,6 +57,12 @@
                 </div> -->
                 <!-- mockup outbound -->
                 
+            </div>
+
+            <div class="buttons">
+                <div class="write">
+                    <a href="createThread.html">Create New Thread <i class="fa-regular fa-pen-to-square"></i></a>
+                </div>
             </div>
         </div>
     </div>

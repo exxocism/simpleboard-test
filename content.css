@@ -1,37 +1,32 @@
+
 .forumNameAndTag {
     flex: 8 8 auto;
-    margin-bottom: 3rem;
 }
 
 .forumAnd {
     margin: 0 0.8rem;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color: grey;
-    font-size: 2vmin;
     font-weight: 600;
 }
 
 .forumTag {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 2.3vmin;
     font-weight: bold;
     color: #6a3f38b7;
 }
 
 .articleName {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 2.5vmin;
     font-weight: bold;
     color: #ee837b;
     margin-left: 0.5rem;
-    margin-bottom: 2rem;
 }
 
 .tagsAndCommentCount {
     display: flex;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color: grey;
-    width: 25vw;
 }
 
 .fa-hashtag,
@@ -51,7 +46,6 @@
 .nameAndTime {
     display: flex;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    width: 20vw;
     margin-top: 1rem;
     margin-bottom: 1.5rem;
 }
@@ -87,3 +81,65 @@
     font-size: 0.9rem;
     margin: 0.5rem 1rem;
 }
+
+@media screen and (min-width: 1024px) {
+
+    .forumNameAndTag {
+        margin-bottom: 3rem;
+    }
+
+    .forumAnd {
+        font-size: 2vmin;
+    }
+
+    .forumTag {
+        font-size: 2.3vmin;
+    }
+
+    .articleName {
+        font-size: 2.5vmin;
+        margin-bottom: 2rem;
+    }
+
+    .tagsAndCommentCount {
+        width: 35vw;
+    }
+
+    .nameAndTime {
+        width: 20vw;
+    }
+
+}
+
+@media screen and (max-width: 1024px) {
+ 
+    .forumNameAndTag {
+        margin-bottom: 2rem;
+    }
+
+    .forumAnd {
+        font-size: 2.5vmax;
+    }
+
+    .forumTag {
+        font-size: 2.3vmax;
+    }
+
+    .articleName {
+        font-size: 2.5vmax;
+        margin-bottom: 1.5rem;
+    }
+
+    .tagsAndCommentCount {
+        width: 50vmax;
+    }
+
+    .nameAndTime {
+        width: 40vmax;
+    }
+}
+
+
+
+
+
